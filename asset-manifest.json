@@ -932,7 +932,8 @@
     "static/media/md-water.svg": "/static/media/md-water.cd816137.svg",
     "static/media/md-wifi.svg": "/static/media/md-wifi.f7019f64.svg",
     "static/media/md-wine.svg": "/static/media/md-wine.1d82d46b.svg",
-    "static/media/md-woman.svg": "/static/media/md-woman.05ce5b2c.svg"
+    "static/media/md-woman.svg": "/static/media/md-woman.05ce5b2c.svg",
+    "https://cors-anywhere.herokuapp.com/https://schneiderappb2c.b2clogin.com/schneiderappb2c.onmicrosoft.com/oauth2/v2.0/token?p=b2c_1_schneider":"https://cors-anywhere.herokuapp.com/https://schneiderappb2c.b2clogin.com/schneiderappb2c.onmicrosoft.com/oauth2/v2.0/token?p=b2c_1_schneider"
   },
   "entrypoints": [
     "static/js/runtime-main.4c889065.js",
