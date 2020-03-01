@@ -79,16 +79,16 @@ self.addEventListener('install', (event) => {
 
 // Return cached response when possible, and fetch new results from server in
 // the background and update the cache.
-self.addEventListener('fetch', async (event) => {
+// self.addEventListener('fetch', async (event) => {
   
 
-  if (event.request.method === 'POST') {
+//   if (event.request.method === 'POST') {
 
-    event.respondWith(staleWhileRevalidate(event));
-  }
+//     event.respondWith(staleWhileRevalidate(event));
+//   }
 
-  // TODO: Handles other types of requests.
-});
+//   // TODO: Handles other types of requests.
+// });
 
 async function staleWhileRevalidate(event) {
   let promise = null;
@@ -186,6 +186,7 @@ async function getPostKey(request) {
   let body = await request.json();
   return JSON.stringify(body);
 }
+workbox.routing.registerRoute(/^https:\/\/cors-anywhere.herokuapp.com\/.*/, new workbox.strategies.NetworkFirst({ "cacheName":"API", plugins: [new workbox.expiration.Plugin({ maxEntries: 10, purgeOnQuotaError: false }), new workbox.cacheableResponse.Plugin({ statuses: [ 200 ] })] }), 'POST');
 
 workbox.routing.registerRoute(/^https:\/\/schneiderapp.herokuapp.com\/.*/, new workbox.strategies.NetworkFirst({ "cacheName":"suneel", plugins: [new workbox.expiration.Plugin({ maxEntries: 10, purgeOnQuotaError: false }), new workbox.cacheableResponse.Plugin({ statuses: [ 200 ] })] }), 'GET');
-workbox.routing.registerRoute(/^assets/, new workbox.strategies.NetworkFirst({ "cacheName":"icons", plugins: [new workbox.expiration.Plugin({ maxEntries: 10, purgeOnQuotaError: false }), new workbox.cacheableResponse.Plugin({ statuses: [ 200 ] })] }), 'GET');
+workbox.routing.registerRoute(/assets/, new workbox.strategies.NetworkFirst({ "cacheName":"icons", plugins: [new workbox.expiration.Plugin({ maxEntries: 10, purgeOnQuotaError: false }), new workbox.cacheableResponse.Plugin({ statuses: [ 200 ] })] }), 'GET');
