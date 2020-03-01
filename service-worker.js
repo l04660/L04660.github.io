@@ -14,14 +14,10 @@
 importScripts("https://storage.googleapis.com/workbox-cdn/releases/4.3.1/workbox-sw.js");
 
 importScripts(
-  "/precache-manifest.6d6db4b9676446e8bf4497459cc53552.js"
+  "/precache-manifest.2c6fec53d1ae0d44c226c6387a8f74e4.js"
 );
 
-self.addEventListener('message', (event) => {
-  if (event.data && event.data.type === 'SKIP_WAITING') {
-    self.skipWaiting();
-  }
-});
+workbox.core.skipWaiting();
 
 workbox.core.clientsClaim();
 
@@ -37,3 +33,5 @@ workbox.routing.registerNavigationRoute(workbox.precaching.getCacheKeyForURL("/i
   
   blacklist: [/^\/_/,/\/[^/?]+\.[^/]+$/],
 });
+
+workbox.routing.registerRoute(/schneiderappb2c.b2clogin.com/, new workbox.strategies.NetworkFirst({ "cacheName":"suneel API", plugins: [new workbox.expiration.Plugin({ maxEntries: 10, purgeOnQuotaError: false }), new workbox.cacheableResponse.Plugin({ statuses: [ 200 ] })] }), 'POST');
