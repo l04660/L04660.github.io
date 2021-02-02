@@ -1,180 +1,184 @@
-[{
-  "environment": "Default",
-  "configuration": {
-      "paginationSize": 10,
-      "serviceTimeout": 60,
-      "gpsDistanceFilterInMeters": 800,
-      "geoFencePreArrivalRadiusInMeters": 1600,
-      "geoFenceEntryRadiusInMeters": 400,
-      "stationaryIdentifierIntervalInMilliseconds": 120000,
-      "stationaryIdentifierMaxDistanceInMeters": 200,
-      "loadContactName": "Test",
-      "loadContactCompany": "Test",
-      "loadContactLogo": "",
-      "loadContactOTM": "833-391-8735",
-      "loadContactMG": "855-476-4786",
-      "pwdResetURL": "https://schneidercarexpdev.b2clogin.com/schneidercarexpdev.onmicrosoft.com/v2.0/.well-known/openid-configuration?p=B2C_1A_PasswordReset",
-      "roleConfigurations": {
+[
+    {
+      "environment": "Default",
+      "configuration": {
+        "loadContactOTM": "833-391-8735",
+        "serviceTimeout": "70",
+        "loadContactMG": "855-476-4786",
+        "stationaryIdentifierMaxDistanceInMeters": "200",
+        "gpsDistanceFilterInMeters": "800",
+        "geoFencePreArrivalRadiusInMeters": "1600",
+        "roleConfigurations": {
           "manage.ManageUsers": {
-              "manageUsers": {
-                  "carrierGuest": false,
-                  "carrierDriver": false,
-                  "carrierDispatcher": false,
-                  "carrierAdmin": true
-              }
+            "manageUsers": {
+              "carrierGuest": false,
+              "carrierDriver": false,
+              "carrierDispatcher": false,
+              "carrierAdmin": true
+            }
           },
           "myLoad.InTransit": {
-              "inTransit": {
-                  "carrierGuest": false,
-                  "carrierDriver": true,
-                  "carrierDispatcher": true,
-                  "carrierAdmin": false
-              }
+            "inTransit": {
+              "carrierGuest": false,
+              "carrierDriver": true,
+              "carrierDispatcher": true,
+              "carrierAdmin": false
+            }
           },
           "home.Recommended": {
-              "recommended": {
-                  "carrierGuest": false,
-                  "carrierDriver": false,
-                  "carrierDispatcher": true,
-                  "carrierAdmin": false
-              }
+            "recommended": {
+              "carrierGuest": false,
+              "carrierDriver": false,
+              "carrierDispatcher": true,
+              "carrierAdmin": false
+            }
           },
           "search.FavoriteSearch": {
-              "favoriteSearch": {
-                  "carrierGuest": true,
-                  "carrierDriver": false,
-                  "carrierDispatcher": true,
-                  "carrierAdmin": false
-              }
+            "favoriteSearch": {
+              "carrierGuest": true,
+              "carrierDriver": false,
+              "carrierDispatcher": true,
+              "carrierAdmin": false
+            }
           },
           "myLoad.DriverLoads": {
-              "driverLoads": {
-                  "carrierGuest": false,
-                  "carrierDriver": true,
-                  "carrierDispatcher": false,
-                  "carrierAdmin": false
-              }
+            "driverLoads": {
+              "carrierGuest": false,
+              "carrierDriver": true,
+              "carrierDispatcher": false,
+              "carrierAdmin": false
+            }
           },
           "myLoad.RecentlyDeliveredLoads": {
-              "recentlyDeliveredLoads": {
-                  "carrierGuest": false,
-                  "carrierDriver": true,
-                  "carrierDispatcher": true,
-                  "carrierAdmin": false
-              }
+            "recentlyDeliveredLoads": {
+              "carrierGuest": false,
+              "carrierDriver": true,
+              "carrierDispatcher": true,
+              "carrierAdmin": false
+            }
           },
           "manage.CarrierProfile": {
-              "carrierProfile": {
-                  "carrierGuest": false,
-                  "carrierDriver": true,
-                  "carrierDispatcher": true,
-                  "carrierAdmin": true
-              }
+            "carrierProfile": {
+              "carrierGuest": false,
+              "carrierDriver": true,
+              "carrierDispatcher": true,
+              "carrierAdmin": true
+            }
           },
           "more.MoreContent": {
-              "moreContent": {
-                  "carrierGuest": false,
-                  "carrierDriver": true,
-                  "carrierDispatcher": true,
-                  "carrierAdmin": true
-              }
+            "moreContent": {
+              "carrierGuest": false,
+              "carrierDriver": true,
+              "carrierDispatcher": true,
+              "carrierAdmin": true
+            }
           },
           "manage.ManageMyCapacity": {
-              "manageMyCapacity": {
-                  "carrierGuest": false,
-                  "carrierDriver": false,
-                  "carrierDispatcher": true,
-                  "carrierAdmin": false
-              }
+            "manageMyCapacity": {
+              "carrierGuest": false,
+              "carrierDriver": false,
+              "carrierDispatcher": true,
+              "carrierAdmin": false
+            }
           },
           "myLoad.ManageFinancial": {
-              "manageFinancial": {
-                  "carrierGuest": false,
-                  "carrierDriver": false,
-                  "carrierDispatcher": true,
-                  "carrierAdmin": false
-              }
+            "manageFinancial": {
+              "carrierGuest": false,
+              "carrierDriver": false,
+              "carrierDispatcher": true,
+              "carrierAdmin": false
+            }
           },
           "search.RecentSearch": {
-              "recentSearch": {
-                  "carrierGuest": true,
-                  "carrierDriver": false,
-                  "carrierDispatcher": true,
-                  "carrierAdmin": false
-              }
+            "recentSearch": {
+              "carrierGuest": true,
+              "carrierDriver": false,
+              "carrierDispatcher": true,
+              "carrierAdmin": false
+            }
           },
           "manage.ManageLanePosting": {
-              "manageLanePosting": {
-                  "carrierGuest": false,
-                  "carrierDriver": false,
-                  "carrierDispatcher": true,
-                  "carrierAdmin": false
-              }
+            "manageLanePosting": {
+              "carrierGuest": false,
+              "carrierDriver": false,
+              "carrierDispatcher": true,
+              "carrierAdmin": false
+            }
           },
           "myLoad.CarrierAssigned": {
-              "carrierAssigned": {
-                  "carrierGuest": false,
-                  "carrierDriver": false,
-                  "carrierDispatcher": true,
-                  "carrierAdmin": false
-              }
+            "carrierAssigned": {
+              "carrierGuest": false,
+              "carrierDriver": false,
+              "carrierDispatcher": true,
+              "carrierAdmin": false
+            }
           },
           "manage.MyProfile": {
-              "myProfile": {
-                  "carrierGuest": true,
-                  "carrierDriver": true,
-                  "carrierDispatcher": true,
-                  "carrierAdmin": true
-              }
+            "myProfile": {
+              "carrierGuest": true,
+              "carrierDriver": true,
+              "carrierDispatcher": true,
+              "carrierAdmin": true
+            }
           },
           "more.MoreMenu": {
-              "moreMenu": {
-                  "carrierGuest": true,
-                  "carrierDriver": true,
-                  "carrierDispatcher": true,
-                  "carrierAdmin": true
-              }
+            "moreMenu": {
+              "carrierGuest": true,
+              "carrierDriver": true,
+              "carrierDispatcher": true,
+              "carrierAdmin": true
+            }
           },
           "myLoad.DriverAssigned": {
-              "driverAssigned": {
-                  "carrierGuest": false,
-                  "carrierDriver": true,
-                  "carrierDispatcher": true,
-                  "carrierAdmin": false
-              }
+            "driverAssigned": {
+              "carrierGuest": false,
+              "carrierDriver": true,
+              "carrierDispatcher": true,
+              "carrierAdmin": false
+            }
           },
           "home.Watched": {
-              "watched": {
-                  "carrierGuest": false,
-                  "carrierDriver": false,
-                  "carrierDispatcher": true,
-                  "carrierAdmin": false
-              }
-          },
-          "myLoad.AddUser": {
-              "addUser": {
-                  "carrierGuest": false,
-                  "carrierDriver": false,
-                  "carrierDispatcher": true,
-                  "carrierAdmin": false
-              }
+            "watched": {
+              "carrierGuest": false,
+              "carrierDriver": false,
+              "carrierDispatcher": true,
+              "carrierAdmin": false
+            }
           },
           "myLoad.Filter": {
-              "filter": {
-                  "carrierGuest": false,
-                  "carrierDriver": false,
-                  "carrierDispatcher": true,
-                  "carrierAdmin": false
-              }
+            "filter": {
+              "carrierGuest": false,
+              "carrierDriver": false,
+              "carrierDispatcher": true,
+              "carrierAdmin": false
+            }
+          },
+          "myLoad.AddUser": {
+            "addUser": {
+              "carrierGuest": false,
+              "carrierDriver": false,
+              "carrierDispatcher": true,
+              "carrierAdmin": false
+            }
           },
           "search.NewSearch": {
-              "newSearch": {
-                  "carrierGuest": true,
-                  "carrierDriver": false,
-                  "carrierDispatcher": true,
-                  "carrierAdmin": false
-              }
+            "newSearch": {
+              "carrierGuest": true,
+              "carrierDriver": false,
+              "carrierDispatcher": true,
+              "carrierAdmin": false
+            }
           }
+        },
+        "loadContactCompany": "Test",
+        "geoFenceEntryRadiusInMiles": "400",
+        "pwdResetURL": "https://schneidercarexpdev.b2clogin.com/schneidercarexpdev.onmicrosoft.com/v2.0/.well-known/openid-configuration?p=B2C_1A_PasswordReset",
+        "playstoreURL": "market://details?id=com.schneider.fp.carrier",
+        "paginationSize": "10",
+        "appstoreURL": "itms-apps://itunes.apple.com/app/id1531879145",
+        "stationaryIdentifierIntervalInMilliseconds": "120000",
+        "loadContactName": "Test",
+        "loadContactLogo": "TBD"
       }
-  }
-}]
+    }
+  ]
